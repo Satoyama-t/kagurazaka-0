@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春のひととき、花とコーヒー - ポップアップストア告知</title>
+    <!-- Tailwind CSSの読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fontsの読み込み（ナチュラルな手書き風フォント） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            /* 全体に手書き風フォントを適用してナチュラルな雰囲気に */
+            font-family: 'Zen Kurenaido', sans-serif;
+            background-color: #f0ede6; /* 周辺の背景色 */
+        }
+        .poster-container {
+            background-color: #ffffff;
+            max-width: 800px; /* A4サイズに近い横幅に設定 */
+            margin: 2rem auto;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        /* フォントサイズを少し大きめに調整（手書きフォントは少し小さく見えるため） */
+        .text-handwritten {
+            font-size: 110%;
+        }
+        
+        /* 印刷時の設定：A4用紙に綺麗に収まるように余白や影を消す */
+        @media print {
+            body { background-color: #ffffff; }
+            .poster-container {
+                margin: 0;
+                box-shadow: none;
+                max-width: 100%;
+                width: 100%;
+            }
+            /* 印刷時に背景画像や色が消えないようにする設定 */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 leading-relaxed text-handwritten">
+
+    <div class="poster-container">
+        
+        <!-- ヘッダー画像とタイトル -->
+        <!-- メインビジュアル -->
+        <div class="relative h-[400px] md:h-[500px]">
+            <!-- メイン画像を IMG_3015_Original.JPG に変更しました -->
+            <img src="IMG_3015_Original.JPG" alt="メインビジュアル" class="w-full h-full object-cover" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1600&auto=format&fit=crop';">
+            
+            <!-- 文字を見やすくするための暗いオーバーレイ -->
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                <p class="text-sm md:text-lg tracking-[0.2em] mb-3 font-medium opacity-90 text-shadow">POP UP STORE</p>
+                <!-- メインタイトルを変更（どの画面サイズでも改行されるように変更し、行間を少し調整しました） -->
+                <h1 class="text-4xl md:text-6xl font-bold tracking-widest mb-6 text-shadow leading-snug">春のひととき、<br>花とコーヒー</h1>
+                <!-- サブタイトルを変更 -->
+                <p class="text-md md:text-xl tracking-[0.1em] text-shadow">自分へのご褒美は、挽きたての一杯と、摘みたての一輪。</p>
+            </div>
+        </div>
+
+        <!-- コンテンツ部分 -->
+        <div class="p-8 md:p-14">
+            
+            <!-- ご挨拶・コンセプト -->
+            <div class="text-center mb-12">
+                <p class="leading-loose text-gray-600 text-[16px] md:text-xl">
+                    <!-- 追加テキスト -->
+                    <span class="text-[#748766] font-bold text-lg md:text-2xl block mb-4">忙しい毎日を脱いで、花と向き合うひとときを。<br>TOKI CAFEで待っています。</span>
+                    
+                    色鮮やかな春の訪れを感じるお花たちをご用意して、<br class="hidden md:block">
+                    神楽坂にて1日限定のポップアップストアをオープンいたします。<br>
+                    日々の暮らしに寄り添うお花や手作りの雑貨を見つけに、<br class="hidden md:block">
+                    ぜひお気軽にお立ち寄りください。
+                </p>
+            </div>
+
+            <!-- 商品画像ギャラリー (3枚並び) -->
+            <div class="grid grid-cols-3 gap-3 md:gap-6 mb-12">
+                <div class="aspect-square overflow-hidden rounded">
+                    <!-- 新しくアップロードされた画像に変更しました -->
+                    <img src="IMG_9998.jpeg" alt="春のお花" class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1596438459194-f28bf8703445?q=80&w=800&auto=format&fit=crop';">
+                </div>
+                <div class="aspect-square overflow-hidden rounded">
+                    <!-- 新しくアップロードされた画像に変更しました -->
+                    <img src="IMG_9740.jpeg" alt="春のお花" class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522748906645-95d8e1320ea5?q=80&w=800&auto=format&fit=crop';">
+                </div>
+                <div class="aspect-square overflow-hidden rounded">
+                    <!-- 新しくアップロードされた画像に変更しました -->
+                    <img src="IMG_0015.jpeg" alt="春のお花" class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588624103853-9a3b2b524738?q=80&w=800&auto=format&fit=crop';">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10">
+                
+                <!-- 開催情報 (左側) -->
+                <div class="flex-1 bg-[#fcfbfa] p-8 rounded-xl border border-[#ece7e1]">
+                    <h2 class="text-2xl font-bold mb-6 text-center text-[#748766] border-b border-[#748766] pb-3 inline-block mx-auto w-full tracking-widest">INFORMATION</h2>
+                    
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-500 mb-1 tracking-widest">DATE</p>
+                        <p class="text-2xl font-bold text-[#4a4a4a] mb-1">2026年3月22日 <span class="text-xl font-normal">(日)</span></p>
+                        <!-- 開催時間の文字色を日にちと同じ #4a4a4a に変更しました -->
+                        <p class="text-xl font-bold text-[#4a4a4a] tracking-wider">10:00 a.m. ~ 6:00 p.m.</p>
+                    </div>
+
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1 tracking-widest">PLACE</p>
+                        <p class="text-2xl font-bold text-[#4a4a4a] mb-2">TOKICAFE 神楽坂</p>
+                        <p class="text-md text-gray-600 leading-relaxed mb-3">
+                            東京都新宿区神楽坂2-12<br>
+                            (飯田橋駅 徒歩3分)
+                        </p>
+                        <!-- Google Mapsへのリンク -->
+                        <a href="https://share.google/CR7C97cOfsDEPTLN4" target="_blank" class="inline-flex items-center text-md text-[#8a9e7a] hover:text-[#657558] font-bold underline transition-colors">
+                            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Google Mapsで確認する
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 販売商品・SNS情報 (右側) -->
+                <div class="flex-1 flex flex-col justify-between py-2">
+                    <div>
+                        <h2 class="text-xl font-bold mb-5 text-[#748766] tracking-widest">販売予定商品</h2>
+                        <ul class="space-y-4 text-gray-700 text-md md:text-lg">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-[#d49e99] rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                花・花苗・ドライフラワー
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-[#d49e99] rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                生花販売
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-[#d49e99] rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                手作りリース
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-[#d49e99] rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                造花リース・アレンジメント
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-[#d49e99] rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                フラワーベース等の雑貨
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <p class="text-sm text-gray-500 mb-3 tracking-wider">最新情報・お問い合わせ</p>
+                        <a href="https://instagram.com/satoyama2021" target="_blank" class="inline-flex items-center space-x-3 bg-white border border-gray-200 py-3 px-5 rounded-lg shadow-sm hover:shadow transition-shadow w-full md:w-auto">
+                            <!-- Instagramロゴアイコン -->
+                            <svg class="w-6 h-6 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                            <span class="font-bold text-gray-800 tracking-wider">@satoyama2021</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- フッター装飾 -->
+            <div class="mt-14 text-center border-t border-gray-200 pt-8 pb-4">
+                <p class="text-[14px] text-[#a89f91] tracking-widest">皆様とお会いできるのを楽しみにしております。</p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
